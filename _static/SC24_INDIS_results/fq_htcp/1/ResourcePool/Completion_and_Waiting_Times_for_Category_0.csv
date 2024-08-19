@@ -1,4 +1,4 @@
-waiting_times,completion_times,total_completion_times
+waiting_times,completion_times,turnaround_times
 0.5,6.527999999999999,7.027999999999999
 0.37569638378045145,4.884,5.259696383780452
 0.4216633606818494,7.968,8.38966336068185
