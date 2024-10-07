@@ -1,0 +1,2 @@
+time,retransmissions,connection_id,src,dst
+187.12390499999987,0,5745,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.dtn.DTN object at 0x000002157C490100>

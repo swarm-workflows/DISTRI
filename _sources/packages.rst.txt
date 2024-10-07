@@ -7,10 +7,10 @@ Packages
 .. toctree::
    :hidden:
 
-HPCSwarmNet class diagram
+DISTRI class diagram
 =========================
 
-.. figure:: _static/classes_HPCSwarmNet.png
+.. figure:: _static/classes_DISTRI.png
    :alt: classes
    :align: center
    :scale: 50%
