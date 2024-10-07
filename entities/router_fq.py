@@ -63,6 +63,7 @@ class RouterFq:
 
     def add_route(self, destination, via=None, queue_id=None):
         """Adds a route to another device (router, processor, DTN), optionally via another router."""
+        via = None
         next_hop = via if via else destination
         next_hop_nic_speed = next_hop.nic_speed if hasattr(next_hop, 'nic_speed') else self.nic_speed
 

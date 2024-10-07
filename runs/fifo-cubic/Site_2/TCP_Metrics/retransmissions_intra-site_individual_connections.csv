@@ -1,0 +1,19 @@
+time,retransmissions,connection_id,src,dst
+25.07177000000001,0,50550,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A0A0>
+26.07180000000001,0,50550,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A0A0>
+25.5,0,74983,<entities.processor.Processor object at 0x000002157E26FEE0>,<entities.dtn.DTN object at 0x000002157E26FD60>
+26.57377000000021,0,88872,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A250>
+87.0,0,76796,<entities.processor.Processor object at 0x000002157E27A760>,<entities.dtn.DTN object at 0x000002157E26FD60>
+88.0,0,76796,<entities.processor.Processor object at 0x000002157E27A760>,<entities.dtn.DTN object at 0x000002157E26FD60>
+117.5,0,85683,<entities.processor.Processor object at 0x000002157E27A760>,<entities.dtn.DTN object at 0x000002157E26FD60>
+118.55856500000101,0,67594,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A5B0>
+119.558595000001,0,67594,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A5B0>
+118.55869500000101,0,73224,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A760>
+119.558725000001,0,73224,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A760>
+134.12366000000054,0,19274,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A250>
+135.12369000000055,0,19274,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A250>
+135.5,0,82536,<entities.processor.Processor object at 0x000002157E27A760>,<entities.dtn.DTN object at 0x000002157E26FD60>
+136.85912000000056,0,42366,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A5B0>
+137.85915000000057,0,42366,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A5B0>
+175.5,0,51663,<entities.processor.Processor object at 0x000002157E27A760>,<entities.dtn.DTN object at 0x000002157E26FD60>
+189.8016899999998,0,42034,<entities.dtn.DTN object at 0x000002157E26FD60>,<entities.processor.Processor object at 0x000002157E27A0A0>

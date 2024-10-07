@@ -1,6 +1,6 @@
-# HPCSwarmNet
+# DISTRI
 
-**HPCSwarmNet** is a dedicated network simulator designed for high-performance computing (HPC) facilities. It focuses on the development and testing of algorithms that promote decentralization and resilience in HPC environments. This tool is particularly useful for researchers and developers who are looking to enhance the efficiency and robustness of HPC systems through advanced, decentralized solutions.
+**DISTRI** is a dedicated network simulator designed for high-performance computing (HPC) facilities. It focuses on the development and testing of algorithms that promote decentralization and resilience in HPC environments. This tool is particularly useful for researchers and developers who are looking to enhance the efficiency and robustness of HPC systems through advanced, decentralized solutions.
 
 ## Features
 

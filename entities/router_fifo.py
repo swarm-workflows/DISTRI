@@ -13,7 +13,7 @@ class RouterFifo:
         self.env = env
         self.router_id = router_id
         self.nic_speed = nic_speed
-        self.delay = delay
+        self.delay = delay  # simulate one-way-delay
         self.queue_limit = queue_limit  # Set the queue size limit
         self.queue = simpy.Store(env)
         self.routing_table = {}  # Maps destination objects to their next hop and NIC speed
@@ -33,7 +33,18 @@ class RouterFifo:
             print(f"Router {self.router_id} at {self.env.now}: Routing packet to destination {destination.router_id if hasattr(destination, 'router_id') else id(destination)} via {next_hop.router_id if hasattr(next_hop, 'router_id') else 'direct'}")
             self.record_load()  # Record load before sending
             yield self.env.timeout(self.calculate_transfer_time(packet, next_hop_nic_speed))  # Simulate transfer time based on the packet size and NIC speed
-            yield self.env.process(next_hop.receive_packet(packet) if next_hop else destination.receive_packet(packet))
+            # yield self.env.process(next_hop.receive_packet(packet) if next_hop else destination.receive_packet(packet))
+            if hasattr(destination, 'router_id'):
+                if hasattr(next_hop, 'receive_packet') and callable(next_hop.receive_packet):
+                    yield self.env.process(next_hop.receive_packet(packet))
+                else:
+                    print(f"Error: next_hop does not have a valid receive_packet method.")
+            else:
+                if hasattr(destination, 'receive_packet') and callable(destination.receive_packet):
+                    yield self.env.process(destination.receive_packet(packet))
+                else:
+                    print(f"Error: destination does not have a valid receive_packet method.")
+
         else:
             print(f"Router {self.router_id} at {self.env.now}: No route to destination {destination.router_id if hasattr(destination, 'router_id') else id(destination)} found.")
 
@@ -44,13 +55,13 @@ class RouterFifo:
             if self.queue.items:
                 packet_info = yield self.queue.get()
                 packet = packet_info['packet']
-
-                # Optionally add a simulated processing delay
-                # yield self.env.timeout(self.delay)  # Additional fixed delay for processing
+                self.record_load()
+            
                 
                 packet_wait_time = self.env.now - packet_info['time_queued']
                 self.packet_wait_times.append((self.env.now, packet_wait_time))
 
+                print(f"Router {self.router_id} at {self.env.now}: processing packet {packet}")
                 yield self.env.process(self.send_packet(packet))
             else:
                 yield self.env.timeout(0.1)  # Wait for packets
@@ -59,7 +70,7 @@ class RouterFifo:
         """Calculate the transfer time based on the router's NIC speed and the next hop's NIC speed."""
         transfer_speed = min(self.nic_speed, next_hop_nic_speed)
         transfer_time = packet.packet_size / transfer_speed
-        return transfer_time # Adding delay as a one-way-delay to simulate link travel time
+        return transfer_time + self.delay # Adding delay as a one-way-delay to simulate link travel time
 
     def add_route(self, destination, via=None):
         """Adds a route to another device (router, processor, DTN). Optionally via another router."""

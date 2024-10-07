@@ -1,0 +1,20 @@
+time,retransmissions,connection_id,src,dst
+15.06353514603443,0,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.082852627780136,1,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.082882627780137,2,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.225202924307629,0,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.22523292430763,1,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.246338183769186,2,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.267309035798048,3,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.286912281323303,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.426703871157901,0,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.426733871157902,1,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.447707762263176,2,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.46856366698029,3,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.488066333607764,3,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.488096333607766,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.507668666906806,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.526048208543466,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.564734057475544,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+15.58475417529111,4,69901,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43DEB47F0>
+29.60975500000044,0,76217,<entities.dtn.DTN object at 0x000001F43F5D0C10>,<entities.dtn.DTN object at 0x000001F43F5C40A0>
