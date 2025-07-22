@@ -1,0 +1,8 @@
+time,retransmissions,connection_id,src,dst
+8.099009999999943,0,2612,<entities.dtn.DTN object at 0x11163b550>,<entities.dtn.DTN object at 0x11165b670>
+29.01829500000018,0,25631,<entities.dtn.DTN object at 0x11163b550>,<entities.dtn.DTN object at 0x11165b670>
+167.41962999995883,0,33494,<entities.dtn.DTN object at 0x11163b550>,<entities.dtn.DTN object at 0x11165b670>
+175.88030000001575,0,72173,<entities.dtn.DTN object at 0x11163b550>,<entities.dtn.DTN object at 0x11165b670>
+188.49357000002937,0,56399,<entities.dtn.DTN object at 0x11163b550>,<entities.dtn.DTN object at 0x11165b670>
+9.259884999999938,0,98059,<entities.dtn.DTN object at 0x11165b670>,<entities.dtn.DTN object at 0x11163b550>
+11.37023999999992,0,73188,<entities.dtn.DTN object at 0x11165b670>,<entities.dtn.DTN object at 0x11163b550>

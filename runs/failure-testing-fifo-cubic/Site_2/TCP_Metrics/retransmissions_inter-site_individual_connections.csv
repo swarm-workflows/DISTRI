@@ -1,0 +1,22 @@
+time,retransmissions,connection_id,src,dst
+65.67857000000119,0,17898,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+76.76160500000233,0,29984,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+77.85592500000247,0,29984,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+77.85595500000247,1,29984,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+79.58824500000281,0,2085,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+84.95132000000191,0,56149,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+86.18793000000186,0,56149,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+86.18796000000185,1,56149,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+86.23673500000304,0,13969,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+107.64185000000248,0,24981,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+107.64188000000247,1,24981,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+127.76455000000352,0,53041,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+129.1443000000035,0,53041,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+129.14433000000352,1,53041,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+136.14588841512835,0,53041,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+136.34912775856407,1,53041,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE96940>
+131.82216500000214,0,93020,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+147.40767331467202,0,93020,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+147.4848441503385,1,93020,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+158.06232000009896,0,10882,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>
+164.23174000000293,0,47100,<entities.dtn.DTN object at 0x000001BF8EEA9730>,<entities.dtn.DTN object at 0x000001BF8EE795B0>

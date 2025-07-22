@@ -1,0 +1,20 @@
+time,throughput,connection_id,src,dst
+2.50023,0.0,65987,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+6.000359999999998,0.0,55304,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+14.231699999999911,40.5,25197,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+15.231699999999911,148.5,25197,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+16.23169999999991,71.0,25197,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+41.34841000000045,0.0,30809,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+45.74659000000059,0.0,82727,<entities.dtn.DTN object at 0x1180d1550>,<entities.dtn.DTN object at 0x118103460>
+16.713959999999958,42.0,67861,<entities.dtn.DTN object at 0x1180f2670>,<entities.dtn.DTN object at 0x118103460>
+17.713959999999958,57.0,67861,<entities.dtn.DTN object at 0x1180f2670>,<entities.dtn.DTN object at 0x118103460>
+2.7160800000000007,42.0,73464,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+3.7160800000000007,110.0,73464,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+6.1746700000000025,58.5,72932,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+7.1746700000000025,148.5,72932,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+8.174670000000003,67.0,72932,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+14.10022999999997,0.0,82894,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+16.50035999999996,0.0,96702,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180f2670>
+41.49943000000036,76.5,42515,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+42.49943000000036,0.5,42515,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>
+45.94535000000044,51.0,27926,<entities.dtn.DTN object at 0x118103460>,<entities.dtn.DTN object at 0x1180d1550>

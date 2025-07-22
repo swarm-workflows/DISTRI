@@ -1,0 +1,11 @@
+time,retransmissions,connection_id,src,dst
+142.5591650000003,0,62493,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E2651F0>
+143.6116450000003,0,62493,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E2651F0>
+143.6116750000003,1,62493,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E2651F0>
+151.00765592982975,0,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.02785081360116,1,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.02788081360117,2,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.04805883690113,2,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.04808883690114,3,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.0670021072886,3,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>
+151.08599496887763,4,73140,<entities.dtn.DTN object at 0x000002157C490100>,<entities.dtn.DTN object at 0x000002157E26FD60>

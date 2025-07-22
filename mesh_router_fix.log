@@ -1,0 +1,119 @@
+Total number of processors: 27
+Number of failures: 9
+Failures per site: 3, Remaining failures: 0
+
+Site 0 has 3 failures to assign.
+Processors available for site 0: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Assigned failure to Processor 1 at time 0.25 for duration 2.75
+Assigned failure to Processor 3 at time 1.40 for duration 1.02
+Assigned failure to Processor 8 at time 0.87 for duration 4.22
+Site 1 has 3 failures to assign.
+Processors available for site 1: [9, 10, 11, 12, 13, 14, 15, 16, 17]
+Assigned failure to Processor 9 at time 0.94 for duration 2.33
+Assigned failure to Processor 9 at time 5.61 for duration 7.16
+Assigned failure to Processor 17 at time 4.20 for duration 4.49
+Site 2 has 3 failures to assign.
+Processors available for site 2: [18, 19, 20, 21, 22, 23, 24, 25, 26]
+Assigned failure to Processor 22 at time 8.09 for duration 0.06
+Assigned failure to Processor 20 at time 6.98 for duration 3.40
+Assigned failure to Processor 20 at time 2.15 for duration 7.63
+
+Failure schedule generated successfully.
+
+Creating HPC site 0 out of 0 to 2
+ResourcePool 0 initialized
+Edge router added with ID 3
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 0
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 1
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 2
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 3
+DTN 0 initialized with edge router 3, having NIC speed 20000 Mbps
+Router 0 connected to Processor 0
+Processor 0 (Category 0) connected to Router 0
+Router 0 connected to Processor 1
+Processor 1 (Category 0) connected to Router 0
+Router 0 connected to Processor 2
+Processor 2 (Category 0) connected to Router 0
+Router 1 connected to Processor 3
+Processor 3 (Category 1) connected to Router 1
+Router 1 connected to Processor 4
+Processor 4 (Category 1) connected to Router 1
+Router 1 connected to Processor 5
+Processor 5 (Category 1) connected to Router 1
+Router 2 connected to Processor 6
+Processor 6 (Category 2) connected to Router 2
+Router 2 connected to Processor 7
+Processor 7 (Category 2) connected to Router 2
+Router 2 connected to Processor 8
+Processor 8 (Category 2) connected to Router 2
+Router 0 is connected to: [<entities.dtn.DTN object at 0x109769100>, <entities.processor.Processor object at 0x109755d90>, <entities.processor.Processor object at 0x109755a90>, <entities.processor.Processor object at 0x1097557c0>, <entities.router_fifo.RouterFifo object at 0x109769520>, <entities.router_fifo.RouterFifo object at 0x109769370>, <entities.processor.Processor object at 0x109755df0>, <entities.processor.Processor object at 0x104cf0460>, <entities.processor.Processor object at 0x108fe1e50>, <entities.processor.Processor object at 0x109755580>, <entities.processor.Processor object at 0x109788250>, <entities.processor.Processor object at 0x109788400>]
+Router 1 is connected to: [<entities.dtn.DTN object at 0x109769100>, <entities.processor.Processor object at 0x109755df0>, <entities.processor.Processor object at 0x104cf0460>, <entities.processor.Processor object at 0x108fe1e50>, <entities.router_fifo.RouterFifo object at 0x109769f10>, <entities.router_fifo.RouterFifo object at 0x109769370>, <entities.processor.Processor object at 0x109755d90>, <entities.processor.Processor object at 0x109755a90>, <entities.processor.Processor object at 0x1097557c0>, <entities.processor.Processor object at 0x109755580>, <entities.processor.Processor object at 0x109788250>, <entities.processor.Processor object at 0x109788400>]
+Router 2 is connected to: [<entities.dtn.DTN object at 0x109769100>, <entities.processor.Processor object at 0x109755580>, <entities.processor.Processor object at 0x109788250>, <entities.processor.Processor object at 0x109788400>, <entities.router_fifo.RouterFifo object at 0x109769f10>, <entities.router_fifo.RouterFifo object at 0x109769520>, <entities.processor.Processor object at 0x109755d90>, <entities.processor.Processor object at 0x109755a90>, <entities.processor.Processor object at 0x1097557c0>, <entities.processor.Processor object at 0x109755df0>, <entities.processor.Processor object at 0x104cf0460>, <entities.processor.Processor object at 0x108fe1e50>]
+Creating HPC site 1 out of 0 to 2
+ResourcePool 1 initialized
+Edge router added with ID 7
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 4
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 5
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 6
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 7
+DTN 1 initialized with edge router 7, having NIC speed 20000 Mbps
+Router 4 connected to Processor 9
+Processor 9 (Category 0) connected to Router 4
+Router 4 connected to Processor 10
+Processor 10 (Category 0) connected to Router 4
+Router 4 connected to Processor 11
+Processor 11 (Category 0) connected to Router 4
+Router 5 connected to Processor 12
+Processor 12 (Category 1) connected to Router 5
+Router 5 connected to Processor 13
+Processor 13 (Category 1) connected to Router 5
+Router 5 connected to Processor 14
+Processor 14 (Category 1) connected to Router 5
+Router 6 connected to Processor 15
+Processor 15 (Category 2) connected to Router 6
+Router 6 connected to Processor 16
+Processor 16 (Category 2) connected to Router 6
+Router 6 connected to Processor 17
+Processor 17 (Category 2) connected to Router 6
+Router 4 is connected to: [<entities.dtn.DTN object at 0x109788f70>, <entities.processor.Processor object at 0x109791280>, <entities.processor.Processor object at 0x109791520>, <entities.processor.Processor object at 0x1097916d0>, <entities.router_fifo.RouterFifo object at 0x109788700>, <entities.router_fifo.RouterFifo object at 0x109788c10>, <entities.processor.Processor object at 0x1097912b0>, <entities.processor.Processor object at 0x109791a30>, <entities.processor.Processor object at 0x109791be0>, <entities.processor.Processor object at 0x109791880>, <entities.processor.Processor object at 0x109791f40>, <entities.processor.Processor object at 0x10979c130>]
+Router 5 is connected to: [<entities.dtn.DTN object at 0x109788f70>, <entities.processor.Processor object at 0x1097912b0>, <entities.processor.Processor object at 0x109791a30>, <entities.processor.Processor object at 0x109791be0>, <entities.router_fifo.RouterFifo object at 0x109788e50>, <entities.router_fifo.RouterFifo object at 0x109788c10>, <entities.processor.Processor object at 0x109791280>, <entities.processor.Processor object at 0x109791520>, <entities.processor.Processor object at 0x1097916d0>, <entities.processor.Processor object at 0x109791880>, <entities.processor.Processor object at 0x109791f40>, <entities.processor.Processor object at 0x10979c130>]
+Router 6 is connected to: [<entities.dtn.DTN object at 0x109788f70>, <entities.processor.Processor object at 0x109791880>, <entities.processor.Processor object at 0x109791f40>, <entities.processor.Processor object at 0x10979c130>, <entities.router_fifo.RouterFifo object at 0x109788e50>, <entities.router_fifo.RouterFifo object at 0x109788700>, <entities.processor.Processor object at 0x109791280>, <entities.processor.Processor object at 0x109791520>, <entities.processor.Processor object at 0x1097916d0>, <entities.processor.Processor object at 0x1097912b0>, <entities.processor.Processor object at 0x109791a30>, <entities.processor.Processor object at 0x109791be0>]
+Creating HPC site 2 out of 0 to 2
+ResourcePool 2 initialized
+Edge router added with ID 11
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 8
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 9
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 10
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 11
+DTN 2 initialized with edge router 11, having NIC speed 20000 Mbps
+Router 8 connected to Processor 18
+Processor 18 (Category 0) connected to Router 8
+Router 8 connected to Processor 19
+Processor 19 (Category 0) connected to Router 8
+Router 8 connected to Processor 20
+Processor 20 (Category 0) connected to Router 8
+Router 9 connected to Processor 21
+Processor 21 (Category 1) connected to Router 9
+Router 9 connected to Processor 22
+Processor 22 (Category 1) connected to Router 9
+Router 9 connected to Processor 23
+Processor 23 (Category 1) connected to Router 9
+Router 10 connected to Processor 24
+Processor 24 (Category 2) connected to Router 10
+Router 10 connected to Processor 25
+Processor 25 (Category 2) connected to Router 10
+Router 10 connected to Processor 26
+Processor 26 (Category 2) connected to Router 10
+Router 8 is connected to: [<entities.dtn.DTN object at 0x10979cb20>, <entities.processor.Processor object at 0x10979cf70>, <entities.processor.Processor object at 0x1097a4190>, <entities.processor.Processor object at 0x1097a4340>, <entities.router_fifo.RouterFifo object at 0x10979c430>, <entities.router_fifo.RouterFifo object at 0x10979c940>, <entities.processor.Processor object at 0x10979cfa0>, <entities.processor.Processor object at 0x1097a4760>, <entities.processor.Processor object at 0x1097a49d0>, <entities.processor.Processor object at 0x1097a45b0>, <entities.processor.Processor object at 0x1097a4d30>, <entities.processor.Processor object at 0x1097a4ee0>]
+Router 9 is connected to: [<entities.dtn.DTN object at 0x10979cb20>, <entities.processor.Processor object at 0x10979cfa0>, <entities.processor.Processor object at 0x1097a4760>, <entities.processor.Processor object at 0x1097a49d0>, <entities.router_fifo.RouterFifo object at 0x10979cb80>, <entities.router_fifo.RouterFifo object at 0x10979c940>, <entities.processor.Processor object at 0x10979cf70>, <entities.processor.Processor object at 0x1097a4190>, <entities.processor.Processor object at 0x1097a4340>, <entities.processor.Processor object at 0x1097a45b0>, <entities.processor.Processor object at 0x1097a4d30>, <entities.processor.Processor object at 0x1097a4ee0>]
+Router 10 is connected to: [<entities.dtn.DTN object at 0x10979cb20>, <entities.processor.Processor object at 0x1097a45b0>, <entities.processor.Processor object at 0x1097a4d30>, <entities.processor.Processor object at 0x1097a4ee0>, <entities.router_fifo.RouterFifo object at 0x10979cb80>, <entities.router_fifo.RouterFifo object at 0x10979c430>, <entities.processor.Processor object at 0x10979cf70>, <entities.processor.Processor object at 0x1097a4190>, <entities.processor.Processor object at 0x1097a4340>, <entities.processor.Processor object at 0x10979cfa0>, <entities.processor.Processor object at 0x1097a4760>, <entities.processor.Processor object at 0x1097a49d0>]
+Edge Router 3 DTN connected to 0
+Edge Router 7 DTN connected to 1
+Edge Router 11 DTN connected to 2
+Mesh network established between edge routers.
+Traceback (most recent call last):
+  File "/Users/imtiaztee/GitHub/DISTRI-master/main.py", line 594, in <module>
+    main()
+  File "/Users/imtiaztee/GitHub/DISTRI-master/main.py", line 535, in main
+    dtn.add_route(processor, via=processor.router)
+AttributeError: 'DTN' object has no attribute 'add_route'

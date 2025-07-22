@@ -1,0 +1,15 @@
+time,retransmissions,connection_id,src,dst
+8.463090060424792,0,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.463120060424792,1,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.565271302871691,2,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.56530130287169,3,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.577258640012728,4,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.577258640012728,4,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.577288640012728,5,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.577288640012728,6,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.59156974000974,8,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.591599740009741,9,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.604044147508521,10,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.604044147508521,10,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.604074147508522,11,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>
+8.604074147508522,12,96568,<entities.dtn.DTN object at 0x10573ddc0>,<entities.dtn.DTN object at 0x10577b4c0>

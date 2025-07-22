@@ -1,0 +1,795 @@
+Total number of processors: 27
+Number of failures: 9
+Failures per site: 3, Remaining failures: 0
+
+Site 0 has 3 failures to assign.
+Processors available for site 0: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Assigned failure to Processor 1 at time 0.25 for duration 2.75
+Assigned failure to Processor 3 at time 1.40 for duration 1.02
+Assigned failure to Processor 8 at time 0.87 for duration 4.22
+Site 1 has 3 failures to assign.
+Processors available for site 1: [9, 10, 11, 12, 13, 14, 15, 16, 17]
+Assigned failure to Processor 9 at time 0.94 for duration 2.33
+Assigned failure to Processor 9 at time 5.61 for duration 7.16
+Assigned failure to Processor 17 at time 4.20 for duration 4.49
+Site 2 has 3 failures to assign.
+Processors available for site 2: [18, 19, 20, 21, 22, 23, 24, 25, 26]
+Assigned failure to Processor 22 at time 8.09 for duration 0.06
+Assigned failure to Processor 20 at time 6.98 for duration 3.40
+Assigned failure to Processor 20 at time 2.15 for duration 7.63
+
+Failure schedule generated successfully.
+
+Creating HPC site 0 out of 0 to 2
+ResourcePool 0 initialized
+Edge router added with ID 3
+[RouterFifo 0] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 0
+[RouterFifo 1] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 1
+[RouterFifo 2] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 2
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+DTN 0 initialized with NIC speed 50000 Mbps, connecting to router 3
+DTN 0 initialized with edge router 3, having NIC speed 20000 Mbps
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x105084520> (id=4379395360), via=None (id=None)
+Router 0 connected to Processor 0
+Processor 0 (Category 0) connected to Router 0
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x105084220> (id=4379394592), via=None (id=None)
+Router 0 connected to Processor 1
+Processor 1 (Category 0) connected to Router 0
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x10506af10> (id=4379291408), via=None (id=None)
+Router 0 connected to Processor 2
+Processor 2 (Category 0) connected to Router 0
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x105084580> (id=4379395456), via=None (id=None)
+Router 1 connected to Processor 3
+Processor 3 (Category 1) connected to Router 1
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via=None (id=None)
+Router 1 connected to Processor 4
+Processor 4 (Category 1) connected to Router 1
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x10508abb0> (id=4379421616), via=None (id=None)
+Router 1 connected to Processor 5
+Processor 5 (Category 1) connected to Router 1
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via=None (id=None)
+Router 2 connected to Processor 6
+Processor 6 (Category 2) connected to Router 2
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10508ad60> (id=4379422048), via=None (id=None)
+Router 2 connected to Processor 7
+Processor 7 (Category 2) connected to Router 2
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10508af10> (id=4379422480), via=None (id=None)
+Router 2 connected to Processor 8
+Processor 8 (Category 2) connected to Router 2
+[RouterFifo 0] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x105084580> (id=4379395456), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x10508abb0> (id=4379421616), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x10508ad60> (id=4379422048), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x10508af10> (id=4379422480), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x105084520> (id=4379395360), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x105084220> (id=4379394592), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x10506af10> (id=4379291408), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x10508ad60> (id=4379422048), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x10508af10> (id=4379422480), via=<entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x105084520> (id=4379395360), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x105084220> (id=4379394592), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10506af10> (id=4379291408), via=<entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x105084580> (id=4379395456), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10508abb0> (id=4379421616), via=<entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000)
+Router 0 routing table:
+  Destination: <entities.dtn.DTN object at 0x105084850> (id=4379396176), via: (<entities.dtn.DTN object at 0x105084850>, 50000) (id=4369269376)
+  Destination: <entities.processor.Processor object at 0x105084520> (id=4379395360), via: (<entities.processor.Processor object at 0x105084520>, 500) (id=4378636352)
+  Destination: <entities.processor.Processor object at 0x105084220> (id=4379394592), via: (<entities.processor.Processor object at 0x105084220>, 500) (id=4369281792)
+  Destination: <entities.processor.Processor object at 0x10506af10> (id=4379291408), via: (<entities.processor.Processor object at 0x10506af10>, 500) (id=4369269312)
+  Destination: <entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4369270976)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369269632)
+  Destination: <entities.processor.Processor object at 0x105084580> (id=4379395456), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4369272256)
+  Destination: <entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4369273344)
+  Destination: <entities.processor.Processor object at 0x10508abb0> (id=4379421616), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4369282240)
+  Destination: <entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369274240)
+  Destination: <entities.processor.Processor object at 0x10508ad60> (id=4379422048), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369275200)
+  Destination: <entities.processor.Processor object at 0x10508af10> (id=4379422480), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369275584)
+Router 1 routing table:
+  Destination: <entities.dtn.DTN object at 0x105084850> (id=4379396176), via: (<entities.dtn.DTN object at 0x105084850>, 50000) (id=4369268864)
+  Destination: <entities.processor.Processor object at 0x105084580> (id=4379395456), via: (<entities.processor.Processor object at 0x105084580>, 1000) (id=4369269056)
+  Destination: <entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via: (<entities.processor.Processor object at 0x103ce5cd0>, 1000) (id=4369133760)
+  Destination: <entities.processor.Processor object at 0x10508abb0> (id=4379421616), via: (<entities.processor.Processor object at 0x10508abb0>, 1000) (id=4369271808)
+  Destination: <entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369269504)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050849d0> (id=4379396560), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369269696)
+  Destination: <entities.processor.Processor object at 0x105084520> (id=4379395360), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369275776)
+  Destination: <entities.processor.Processor object at 0x105084220> (id=4379394592), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369277376)
+  Destination: <entities.processor.Processor object at 0x10506af10> (id=4379291408), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369280384)
+  Destination: <entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369280704)
+  Destination: <entities.processor.Processor object at 0x10508ad60> (id=4379422048), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369284544)
+  Destination: <entities.processor.Processor object at 0x10508af10> (id=4379422480), via: (<entities.router_fifo.RouterFifo object at 0x1050849d0>, 10000) (id=4369283456)
+Router 2 routing table:
+  Destination: <entities.dtn.DTN object at 0x105084850> (id=4379396176), via: (<entities.dtn.DTN object at 0x105084850>, 50000) (id=4378706560)
+  Destination: <entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via: (<entities.processor.Processor object at 0x1048fbaf0>, 2000) (id=4369269440)
+  Destination: <entities.processor.Processor object at 0x10508ad60> (id=4379422048), via: (<entities.processor.Processor object at 0x10508ad60>, 2000) (id=4369270912)
+  Destination: <entities.processor.Processor object at 0x10508af10> (id=4379422480), via: (<entities.processor.Processor object at 0x10508af10>, 2000) (id=4369271552)
+  Destination: <entities.router_fifo.RouterFifo object at 0x105084b20> (id=4379396896), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369272192)
+  Destination: <entities.router_fifo.RouterFifo object at 0x105084f70> (id=4379398000), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4369271872)
+  Destination: <entities.processor.Processor object at 0x105084520> (id=4379395360), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369283712)
+  Destination: <entities.processor.Processor object at 0x105084220> (id=4379394592), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369283776)
+  Destination: <entities.processor.Processor object at 0x10506af10> (id=4379291408), via: (<entities.router_fifo.RouterFifo object at 0x105084b20>, 10000) (id=4369283840)
+  Destination: <entities.processor.Processor object at 0x105084580> (id=4379395456), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4371586688)
+  Destination: <entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4375950144)
+  Destination: <entities.processor.Processor object at 0x10508abb0> (id=4379421616), via: (<entities.router_fifo.RouterFifo object at 0x105084f70>, 10000) (id=4374145728)
+All processor objects:
+  Processor: <entities.processor.Processor object at 0x105084520> (id=4379395360) attached to router 0
+  Processor: <entities.processor.Processor object at 0x105084220> (id=4379394592) attached to router 0
+  Processor: <entities.processor.Processor object at 0x10506af10> (id=4379291408) attached to router 0
+  Processor: <entities.processor.Processor object at 0x105084580> (id=4379395456) attached to router 1
+  Processor: <entities.processor.Processor object at 0x103ce5cd0> (id=4358823120) attached to router 1
+  Processor: <entities.processor.Processor object at 0x10508abb0> (id=4379421616) attached to router 1
+  Processor: <entities.processor.Processor object at 0x1048fbaf0> (id=4371495664) attached to router 2
+  Processor: <entities.processor.Processor object at 0x10508ad60> (id=4379422048) attached to router 2
+  Processor: <entities.processor.Processor object at 0x10508af10> (id=4379422480) attached to router 2
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x105084520> (id=4379395360), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x105084220> (id=4379394592), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.processor.Processor object at 0x10506af10> (id=4379291408), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x105084580> (id=4379395456), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x103ce5cd0> (id=4358823120), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.processor.Processor object at 0x10508abb0> (id=4379421616), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x1048fbaf0> (id=4371495664), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10508ad60> (id=4379422048), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.processor.Processor object at 0x10508af10> (id=4379422480), via=None (id=None)
+Router 0 is connected to: [<entities.dtn.DTN object at 0x105084850>, <entities.processor.Processor object at 0x105084520>, <entities.processor.Processor object at 0x105084220>, <entities.processor.Processor object at 0x10506af10>, <entities.router_fifo.RouterFifo object at 0x105084f70>, <entities.router_fifo.RouterFifo object at 0x1050849d0>, <entities.processor.Processor object at 0x105084580>, <entities.processor.Processor object at 0x103ce5cd0>, <entities.processor.Processor object at 0x10508abb0>, <entities.processor.Processor object at 0x1048fbaf0>, <entities.processor.Processor object at 0x10508ad60>, <entities.processor.Processor object at 0x10508af10>]
+Router 1 is connected to: [<entities.dtn.DTN object at 0x105084850>, <entities.processor.Processor object at 0x105084580>, <entities.processor.Processor object at 0x103ce5cd0>, <entities.processor.Processor object at 0x10508abb0>, <entities.router_fifo.RouterFifo object at 0x105084b20>, <entities.router_fifo.RouterFifo object at 0x1050849d0>, <entities.processor.Processor object at 0x105084520>, <entities.processor.Processor object at 0x105084220>, <entities.processor.Processor object at 0x10506af10>, <entities.processor.Processor object at 0x1048fbaf0>, <entities.processor.Processor object at 0x10508ad60>, <entities.processor.Processor object at 0x10508af10>]
+Router 2 is connected to: [<entities.dtn.DTN object at 0x105084850>, <entities.processor.Processor object at 0x1048fbaf0>, <entities.processor.Processor object at 0x10508ad60>, <entities.processor.Processor object at 0x10508af10>, <entities.router_fifo.RouterFifo object at 0x105084b20>, <entities.router_fifo.RouterFifo object at 0x105084f70>, <entities.processor.Processor object at 0x105084520>, <entities.processor.Processor object at 0x105084220>, <entities.processor.Processor object at 0x10506af10>, <entities.processor.Processor object at 0x105084580>, <entities.processor.Processor object at 0x103ce5cd0>, <entities.processor.Processor object at 0x10508abb0>]
+Creating HPC site 1 out of 0 to 2
+ResourcePool 1 initialized
+Edge router added with ID 7
+[RouterFifo 4] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 4
+[RouterFifo 5] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 5
+[RouterFifo 6] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 6
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+DTN 1 initialized with NIC speed 50000 Mbps, connecting to router 7
+DTN 1 initialized with edge router 7, having NIC speed 20000 Mbps
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via=None (id=None)
+Router 4 connected to Processor 9
+Processor 9 (Category 0) connected to Router 4
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab070> (id=4379553904), via=None (id=None)
+Router 4 connected to Processor 10
+Processor 10 (Category 0) connected to Router 4
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab220> (id=4379554336), via=None (id=None)
+Router 4 connected to Processor 11
+Processor 11 (Category 0) connected to Router 4
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via=None (id=None)
+Router 5 connected to Processor 12
+Processor 12 (Category 1) connected to Router 5
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab580> (id=4379555200), via=None (id=None)
+Router 5 connected to Processor 13
+Processor 13 (Category 1) connected to Router 5
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab730> (id=4379555632), via=None (id=None)
+Router 5 connected to Processor 14
+Processor 14 (Category 1) connected to Router 5
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via=None (id=None)
+Router 6 connected to Processor 15
+Processor 15 (Category 2) connected to Router 6
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050aba90> (id=4379556496), via=None (id=None)
+Router 6 connected to Processor 16
+Processor 16 (Category 2) connected to Router 6
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050abc40> (id=4379556928), via=None (id=None)
+Router 6 connected to Processor 17
+Processor 17 (Category 2) connected to Router 6
+[RouterFifo 4] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab580> (id=4379555200), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab730> (id=4379555632), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050aba90> (id=4379556496), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050abc40> (id=4379556928), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab070> (id=4379553904), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab220> (id=4379554336), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050aba90> (id=4379556496), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050abc40> (id=4379556928), via=<entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab070> (id=4379553904), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab220> (id=4379554336), via=<entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab580> (id=4379555200), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab730> (id=4379555632), via=<entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616)
+Router 4 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via: (<entities.dtn.DTN object at 0x1050a3940>, 50000) (id=4369271552)
+  Destination: <entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via: (<entities.processor.Processor object at 0x1050a3d90>, 500) (id=4379248320)
+  Destination: <entities.processor.Processor object at 0x1050ab070> (id=4379553904), via: (<entities.processor.Processor object at 0x1050ab070>, 500) (id=4379247424)
+  Destination: <entities.processor.Processor object at 0x1050ab220> (id=4379554336), via: (<entities.processor.Processor object at 0x1050ab220>, 500) (id=4379248256)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379247104)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4375839040)
+  Destination: <entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379247808)
+  Destination: <entities.processor.Processor object at 0x1050ab580> (id=4379555200), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379248384)
+  Destination: <entities.processor.Processor object at 0x1050ab730> (id=4379555632), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379248192)
+  Destination: <entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568384)
+  Destination: <entities.processor.Processor object at 0x1050aba90> (id=4379556496), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568448)
+  Destination: <entities.processor.Processor object at 0x1050abc40> (id=4379556928), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568512)
+Router 5 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via: (<entities.dtn.DTN object at 0x1050a3940>, 50000) (id=4379247872)
+  Destination: <entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via: (<entities.processor.Processor object at 0x1050a3dc0>, 1000) (id=4379246912)
+  Destination: <entities.processor.Processor object at 0x1050ab580> (id=4379555200), via: (<entities.processor.Processor object at 0x1050ab580>, 1000) (id=4379247296)
+  Destination: <entities.processor.Processor object at 0x1050ab730> (id=4379555632), via: (<entities.processor.Processor object at 0x1050ab730>, 1000) (id=4379247360)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379247552)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a3760> (id=4379522912), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379222784)
+  Destination: <entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379568576)
+  Destination: <entities.processor.Processor object at 0x1050ab070> (id=4379553904), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379568640)
+  Destination: <entities.processor.Processor object at 0x1050ab220> (id=4379554336), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379568704)
+  Destination: <entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568768)
+  Destination: <entities.processor.Processor object at 0x1050aba90> (id=4379556496), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568832)
+  Destination: <entities.processor.Processor object at 0x1050abc40> (id=4379556928), via: (<entities.router_fifo.RouterFifo object at 0x1050a3760>, 10000) (id=4379568896)
+Router 6 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via: (<entities.dtn.DTN object at 0x1050a3940>, 50000) (id=4377276352)
+  Destination: <entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via: (<entities.processor.Processor object at 0x1050ab3d0>, 2000) (id=4379246848)
+  Destination: <entities.processor.Processor object at 0x1050aba90> (id=4379556496), via: (<entities.processor.Processor object at 0x1050aba90>, 2000) (id=4379247744)
+  Destination: <entities.processor.Processor object at 0x1050abc40> (id=4379556928), via: (<entities.processor.Processor object at 0x1050abc40>, 2000) (id=4379248448)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a39a0> (id=4379523488), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379247680)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050a3250> (id=4379521616), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379222400)
+  Destination: <entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379568960)
+  Destination: <entities.processor.Processor object at 0x1050ab070> (id=4379553904), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379569024)
+  Destination: <entities.processor.Processor object at 0x1050ab220> (id=4379554336), via: (<entities.router_fifo.RouterFifo object at 0x1050a39a0>, 10000) (id=4379569088)
+  Destination: <entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379569216)
+  Destination: <entities.processor.Processor object at 0x1050ab580> (id=4379555200), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379569280)
+  Destination: <entities.processor.Processor object at 0x1050ab730> (id=4379555632), via: (<entities.router_fifo.RouterFifo object at 0x1050a3250>, 10000) (id=4379569344)
+All processor objects:
+  Processor: <entities.processor.Processor object at 0x1050a3d90> (id=4379524496) attached to router 4
+  Processor: <entities.processor.Processor object at 0x1050ab070> (id=4379553904) attached to router 4
+  Processor: <entities.processor.Processor object at 0x1050ab220> (id=4379554336) attached to router 4
+  Processor: <entities.processor.Processor object at 0x1050a3dc0> (id=4379524544) attached to router 5
+  Processor: <entities.processor.Processor object at 0x1050ab580> (id=4379555200) attached to router 5
+  Processor: <entities.processor.Processor object at 0x1050ab730> (id=4379555632) attached to router 5
+  Processor: <entities.processor.Processor object at 0x1050ab3d0> (id=4379554768) attached to router 6
+  Processor: <entities.processor.Processor object at 0x1050aba90> (id=4379556496) attached to router 6
+  Processor: <entities.processor.Processor object at 0x1050abc40> (id=4379556928) attached to router 6
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050a3d90> (id=4379524496), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab070> (id=4379553904), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.processor.Processor object at 0x1050ab220> (id=4379554336), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050a3dc0> (id=4379524544), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab580> (id=4379555200), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.processor.Processor object at 0x1050ab730> (id=4379555632), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050ab3d0> (id=4379554768), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050aba90> (id=4379556496), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.processor.Processor object at 0x1050abc40> (id=4379556928), via=None (id=None)
+Router 4 is connected to: [<entities.dtn.DTN object at 0x1050a3940>, <entities.processor.Processor object at 0x1050a3d90>, <entities.processor.Processor object at 0x1050ab070>, <entities.processor.Processor object at 0x1050ab220>, <entities.router_fifo.RouterFifo object at 0x1050a3250>, <entities.router_fifo.RouterFifo object at 0x1050a3760>, <entities.processor.Processor object at 0x1050a3dc0>, <entities.processor.Processor object at 0x1050ab580>, <entities.processor.Processor object at 0x1050ab730>, <entities.processor.Processor object at 0x1050ab3d0>, <entities.processor.Processor object at 0x1050aba90>, <entities.processor.Processor object at 0x1050abc40>]
+Router 5 is connected to: [<entities.dtn.DTN object at 0x1050a3940>, <entities.processor.Processor object at 0x1050a3dc0>, <entities.processor.Processor object at 0x1050ab580>, <entities.processor.Processor object at 0x1050ab730>, <entities.router_fifo.RouterFifo object at 0x1050a39a0>, <entities.router_fifo.RouterFifo object at 0x1050a3760>, <entities.processor.Processor object at 0x1050a3d90>, <entities.processor.Processor object at 0x1050ab070>, <entities.processor.Processor object at 0x1050ab220>, <entities.processor.Processor object at 0x1050ab3d0>, <entities.processor.Processor object at 0x1050aba90>, <entities.processor.Processor object at 0x1050abc40>]
+Router 6 is connected to: [<entities.dtn.DTN object at 0x1050a3940>, <entities.processor.Processor object at 0x1050ab3d0>, <entities.processor.Processor object at 0x1050aba90>, <entities.processor.Processor object at 0x1050abc40>, <entities.router_fifo.RouterFifo object at 0x1050a39a0>, <entities.router_fifo.RouterFifo object at 0x1050a3250>, <entities.processor.Processor object at 0x1050a3d90>, <entities.processor.Processor object at 0x1050ab070>, <entities.processor.Processor object at 0x1050ab220>, <entities.processor.Processor object at 0x1050a3dc0>, <entities.processor.Processor object at 0x1050ab580>, <entities.processor.Processor object at 0x1050ab730>]
+Creating HPC site 2 out of 0 to 2
+ResourcePool 2 initialized
+Edge router added with ID 11
+[RouterFifo 8] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 8
+[RouterFifo 9] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 9
+[RouterFifo 10] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 10
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+DTN 2 initialized with NIC speed 50000 Mbps, connecting to router 11
+DTN 2 initialized with edge router 11, having NIC speed 20000 Mbps
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via=None (id=None)
+Router 8 connected to Processor 18
+Processor 18 (Category 0) connected to Router 8
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via=None (id=None)
+Router 8 connected to Processor 19
+Processor 19 (Category 0) connected to Router 8
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via=None (id=None)
+Router 8 connected to Processor 20
+Processor 20 (Category 0) connected to Router 8
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via=None (id=None)
+Router 9 connected to Processor 21
+Processor 21 (Category 1) connected to Router 9
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via=None (id=None)
+Router 9 connected to Processor 22
+Processor 22 (Category 1) connected to Router 9
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c0520> (id=4379641120), via=None (id=None)
+Router 9 connected to Processor 23
+Processor 23 (Category 1) connected to Router 9
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0100> (id=4379640064), via=None (id=None)
+Router 10 connected to Processor 24
+Processor 24 (Category 2) connected to Router 10
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0880> (id=4379641984), via=None (id=None)
+Router 10 connected to Processor 25
+Processor 25 (Category 2) connected to Router 10
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via=None (id=None)
+Router 10 connected to Processor 26
+Processor 26 (Category 2) connected to Router 10
+[RouterFifo 8] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050c0520> (id=4379641120), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050c0100> (id=4379640064), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050c0880> (id=4379641984), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c0100> (id=4379640064), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c0880> (id=4379641984), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via=<entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via=<entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0520> (id=4379641120), via=<entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736)
+Router 8 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via: (<entities.dtn.DTN object at 0x1050b7670>, 50000) (id=4379248448)
+  Destination: <entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via: (<entities.processor.Processor object at 0x1050b7ac0>, 500) (id=4379569856)
+  Destination: <entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via: (<entities.processor.Processor object at 0x1050b7ca0>, 500) (id=4379614784)
+  Destination: <entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via: (<entities.processor.Processor object at 0x1050b7e50>, 500) (id=4379628608)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379631104)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379660736)
+  Destination: <entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379661568)
+  Destination: <entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379661632)
+  Destination: <entities.processor.Processor object at 0x1050c0520> (id=4379641120), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379661696)
+  Destination: <entities.processor.Processor object at 0x1050c0100> (id=4379640064), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379661760)
+  Destination: <entities.processor.Processor object at 0x1050c0880> (id=4379641984), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379661824)
+  Destination: <entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379661888)
+Router 9 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via: (<entities.dtn.DTN object at 0x1050b7670>, 50000) (id=4379612544)
+  Destination: <entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via: (<entities.processor.Processor object at 0x1050b7af0>, 1000) (id=4379628736)
+  Destination: <entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via: (<entities.processor.Processor object at 0x1050c02b0>, 1000) (id=4379613248)
+  Destination: <entities.processor.Processor object at 0x1050c0520> (id=4379641120), via: (<entities.processor.Processor object at 0x1050c0520>, 1000) (id=4379628352)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379648768)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050b7490> (id=4379604112), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379661312)
+  Destination: <entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379661952)
+  Destination: <entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379662016)
+  Destination: <entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379662080)
+  Destination: <entities.processor.Processor object at 0x1050c0100> (id=4379640064), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379662144)
+  Destination: <entities.processor.Processor object at 0x1050c0880> (id=4379641984), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379662208)
+  Destination: <entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via: (<entities.router_fifo.RouterFifo object at 0x1050b7490>, 10000) (id=4379662336)
+Router 10 routing table:
+  Destination: <entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via: (<entities.dtn.DTN object at 0x1050b7670>, 50000) (id=4379595072)
+  Destination: <entities.processor.Processor object at 0x1050c0100> (id=4379640064), via: (<entities.processor.Processor object at 0x1050c0100>, 2000) (id=4379631040)
+  Destination: <entities.processor.Processor object at 0x1050c0880> (id=4379641984), via: (<entities.processor.Processor object at 0x1050c0880>, 2000) (id=4379630464)
+  Destination: <entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via: (<entities.processor.Processor object at 0x1050c0a30>, 2000) (id=4379651392)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050abf40> (id=4379557696), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379661376)
+  Destination: <entities.router_fifo.RouterFifo object at 0x1050b7700> (id=4379604736), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379661440)
+  Destination: <entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379662400)
+  Destination: <entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379662464)
+  Destination: <entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via: (<entities.router_fifo.RouterFifo object at 0x1050abf40>, 10000) (id=4379662272)
+  Destination: <entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379662528)
+  Destination: <entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379662592)
+  Destination: <entities.processor.Processor object at 0x1050c0520> (id=4379641120), via: (<entities.router_fifo.RouterFifo object at 0x1050b7700>, 10000) (id=4379662656)
+All processor objects:
+  Processor: <entities.processor.Processor object at 0x1050b7ac0> (id=4379605696) attached to router 8
+  Processor: <entities.processor.Processor object at 0x1050b7ca0> (id=4379606176) attached to router 8
+  Processor: <entities.processor.Processor object at 0x1050b7e50> (id=4379606608) attached to router 8
+  Processor: <entities.processor.Processor object at 0x1050b7af0> (id=4379605744) attached to router 9
+  Processor: <entities.processor.Processor object at 0x1050c02b0> (id=4379640496) attached to router 9
+  Processor: <entities.processor.Processor object at 0x1050c0520> (id=4379641120) attached to router 9
+  Processor: <entities.processor.Processor object at 0x1050c0100> (id=4379640064) attached to router 10
+  Processor: <entities.processor.Processor object at 0x1050c0880> (id=4379641984) attached to router 10
+  Processor: <entities.processor.Processor object at 0x1050c0a30> (id=4379642416) attached to router 10
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7ac0> (id=4379605696), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7ca0> (id=4379606176), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.processor.Processor object at 0x1050b7e50> (id=4379606608), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050b7af0> (id=4379605744), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c02b0> (id=4379640496), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.processor.Processor object at 0x1050c0520> (id=4379641120), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0100> (id=4379640064), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0880> (id=4379641984), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.processor.Processor object at 0x1050c0a30> (id=4379642416), via=None (id=None)
+Router 8 is connected to: [<entities.dtn.DTN object at 0x1050b7670>, <entities.processor.Processor object at 0x1050b7ac0>, <entities.processor.Processor object at 0x1050b7ca0>, <entities.processor.Processor object at 0x1050b7e50>, <entities.router_fifo.RouterFifo object at 0x1050b7700>, <entities.router_fifo.RouterFifo object at 0x1050b7490>, <entities.processor.Processor object at 0x1050b7af0>, <entities.processor.Processor object at 0x1050c02b0>, <entities.processor.Processor object at 0x1050c0520>, <entities.processor.Processor object at 0x1050c0100>, <entities.processor.Processor object at 0x1050c0880>, <entities.processor.Processor object at 0x1050c0a30>]
+Router 9 is connected to: [<entities.dtn.DTN object at 0x1050b7670>, <entities.processor.Processor object at 0x1050b7af0>, <entities.processor.Processor object at 0x1050c02b0>, <entities.processor.Processor object at 0x1050c0520>, <entities.router_fifo.RouterFifo object at 0x1050abf40>, <entities.router_fifo.RouterFifo object at 0x1050b7490>, <entities.processor.Processor object at 0x1050b7ac0>, <entities.processor.Processor object at 0x1050b7ca0>, <entities.processor.Processor object at 0x1050b7e50>, <entities.processor.Processor object at 0x1050c0100>, <entities.processor.Processor object at 0x1050c0880>, <entities.processor.Processor object at 0x1050c0a30>]
+Router 10 is connected to: [<entities.dtn.DTN object at 0x1050b7670>, <entities.processor.Processor object at 0x1050c0100>, <entities.processor.Processor object at 0x1050c0880>, <entities.processor.Processor object at 0x1050c0a30>, <entities.router_fifo.RouterFifo object at 0x1050abf40>, <entities.router_fifo.RouterFifo object at 0x1050b7700>, <entities.processor.Processor object at 0x1050b7ac0>, <entities.processor.Processor object at 0x1050b7ca0>, <entities.processor.Processor object at 0x1050b7e50>, <entities.processor.Processor object at 0x1050b7af0>, <entities.processor.Processor object at 0x1050c02b0>, <entities.processor.Processor object at 0x1050c0520>]
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+Edge Router 3 DTN connected to 0
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+Edge Router 7 DTN connected to 1
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+Edge Router 11 DTN connected to 2
+[RouterFifo 3] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536), via=None (id=None)
+[RouterFifo 3] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688), via=None (id=None)
+[RouterFifo 7] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944), via=None (id=None)
+[RouterFifo 7] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688), via=None (id=None)
+[RouterFifo 11] add_route: destination=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944), via=None (id=None)
+[RouterFifo 11] add_route: destination=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536), via=None (id=None)
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536)
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688)
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944)
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688)
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944)
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536)
+Mesh network established between edge routers.
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536)
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688)
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944)
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=<entities.router_fifo.RouterFifo object at 0x1050b76d0> (id=4379604688)
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=<entities.router_fifo.RouterFifo object at 0x105084b50> (id=4379396944)
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=<entities.router_fifo.RouterFifo object at 0x1050a39d0> (id=4379523536)
+[RouterFifo 3] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 7] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 11] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 0] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 1] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 2] add_route: destination=<entities.dtn.DTN object at 0x105084850> (id=4379396176), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 4] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 5] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 6] add_route: destination=<entities.dtn.DTN object at 0x1050a3940> (id=4379523392), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 8] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 9] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+[RouterFifo 10] add_route: destination=<entities.dtn.DTN object at 0x1050b7670> (id=4379604592), via=None (id=None)
+Router 3 is connected to: [<entities.dtn.DTN object at 0x105084850>, <entities.router_fifo.RouterFifo object at 0x1050a39d0>, <entities.router_fifo.RouterFifo object at 0x1050b76d0>, <entities.dtn.DTN object at 0x1050a3940>, <entities.dtn.DTN object at 0x1050b7670>]
+Router 7 is connected to: [<entities.dtn.DTN object at 0x1050a3940>, <entities.router_fifo.RouterFifo object at 0x105084b50>, <entities.router_fifo.RouterFifo object at 0x1050b76d0>, <entities.dtn.DTN object at 0x105084850>, <entities.dtn.DTN object at 0x1050b7670>]
+Router 11 is connected to: [<entities.dtn.DTN object at 0x1050b7670>, <entities.router_fifo.RouterFifo object at 0x105084b50>, <entities.router_fifo.RouterFifo object at 0x1050a39d0>, <entities.dtn.DTN object at 0x105084850>, <entities.dtn.DTN object at 0x1050a3940>]
+DTN 0 received the list of DTNs: [0, 1, 2]
+DTN 1 received the list of DTNs: [0, 1, 2]
+DTN 2 received the list of DTNs: [0, 1, 2]
+Processor 0 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 0 to assign.
+Processor 1 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 0 to assign.
+Processor 2 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 0 to assign.
+Processor 3 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 1 to assign.
+Processor 4 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 1 to assign.
+Processor 5 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 1 to assign.
+Processor 6 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 2 to assign.
+Processor 7 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 2 to assign.
+Processor 8 eligibility check: True with load 0 and threshold 0
+ResourcePool 0: No jobs available in category 2 to assign.
+ResourcePool 0: added a new job with Job 0 to both site and global job pool.
+Generated and added job 0 in category 2 to ResourcePool 0 with comp 2056 and vol 253 MB. Total jobs now: 1
+Processor 9 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 0 to assign.
+Processor 10 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 0 to assign.
+Processor 11 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 0 to assign.
+Processor 12 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 1 to assign.
+Processor 13 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 1 to assign.
+Processor 14 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 1 to assign.
+Processor 15 eligibility check: True with load 0 and threshold 0
+Processor 16 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 2 to assign.
+Processor 17 eligibility check: True with load 0 and threshold 0
+ResourcePool 1: No jobs available in category 2 to assign.
+ResourcePool 1: added a new job with Job 1 to both site and global job pool.
+Generated and added job 1 in category 2 to ResourcePool 1 with comp 2056 and vol 253 MB. Total jobs now: 1
+Processor 18 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 0 to assign.
+Processor 19 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 0 to assign.
+Processor 20 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 0 to assign.
+Processor 21 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 1 to assign.
+Processor 22 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 1 to assign.
+Processor 23 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 1 to assign.
+Processor 24 eligibility check: True with load 0 and threshold 0
+Processor 25 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 2 to assign.
+Processor 26 eligibility check: True with load 0 and threshold 0
+ResourcePool 2: No jobs available in category 2 to assign.
+ResourcePool 2: added a new job with Job 2 to both site and global job pool.
+Generated and added job 2 in category 2 to ResourcePool 2 with comp 2056 and vol 253 MB. Total jobs now: 1
+ResourcePool 1: Job 0 fetched from global pool for category 2.
+ResourcePool 1: Job 0 assigned to processor 15.
+Processor 15: Job 0 assigned.
+Processor 15: Initiating job 0.
+Processor 15: Requesting data for 0 from initiate_job.
+Processor 15 requesting data for job 0
+TCPConnection <protocols.tcp.TCPConnection object at 0x1050c0e50> initialized between src: <entities.processor.Processor object at 0x1050ab3d0> and dst: <entities.dtn.DTN object at 0x1050a3940> with connection id 33098 and CCA cubic
+Processor 15: initiated TCP connection for job 0 with DTN 1 via Router 6 at time 0.
+TCP 33098 at 0: Preparing to send data request for job 0
+TCP 33098 at 0: Prepared segment REQUEST for job 0 with seq 0
+TCP 33098 at 0: Sending segment REQUEST with seq 0 from <entities.processor.Processor object at 0x1050ab3d0> to <entities.dtn.DTN object at 0x1050a3940> for job 0
+ResourcePool 2: Job 1 fetched from global pool for category 2.
+ResourcePool 2: Job 1 assigned to processor 24.
+Processor 24: Job 1 assigned.
+Processor 24: Initiating job 1.
+Processor 24: Requesting data for 1 from initiate_job.
+Processor 24 requesting data for job 1
+TCPConnection <protocols.tcp.TCPConnection object at 0x1050b7250> initialized between src: <entities.processor.Processor object at 0x1050c0100> and dst: <entities.dtn.DTN object at 0x1050b7670> with connection id 30256 and CCA cubic
+Processor 24: initiated TCP connection for job 1 with DTN 2 via Router 10 at time 0.
+TCP 30256 at 0: Preparing to send data request for job 1
+TCP 30256 at 0: Prepared segment REQUEST for job 1 with seq 0
+TCP 30256 at 0: Sending segment REQUEST with seq 0 from <entities.processor.Processor object at 0x1050c0100> to <entities.dtn.DTN object at 0x1050b7670> for job 1
+TCP 33098 at 0.0: Finally Sending segment REQUEST with seq 0 from <entities.processor.Processor object at 0x1050ab3d0> to <entities.dtn.DTN object at 0x1050a3940> for job 0
+Source is Processor 15, using router 6
+Routing segment 0 with flag REQUEST for job 0 via Router 6
+TCP 30256 at 0.0: Finally Sending segment REQUEST with seq 0 from <entities.processor.Processor object at 0x1050c0100> to <entities.dtn.DTN object at 0x1050b7670> for job 1
+Source is Processor 24, using router 10
+Routing segment 0 with flag REQUEST for job 1 via Router 10
+Scatter plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Faults/job_failures_scatter_plot_colored.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Faults/job_failures_and_completion_times.csv
+Plotting for HPC site 0 out of 0 to 2
+Site 0 - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_0.csv
+Site 0 - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_1.csv
+Site 0 - Category 2: Total Jobs = 1, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0.0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/Times_for_Category_2.csv
+Summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/ResourcePool/summary_statistics.csv
+Global - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.csv
+Global - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.csv
+Global - Category 2: Total Jobs = 3, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0.0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.csv
+Global summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/global_summary_statistics.csv
+Data Arrival Times for Jobs on Processor 0 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_0.csv
+Data Arrival Times for Jobs on Processor 1 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_1.csv
+Data Arrival Times for Jobs on Processor 2 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_2.csv
+Data Arrival Times for Jobs on Processor 3 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_3.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_3.csv
+Data Arrival Times for Jobs on Processor 4 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_4.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_4.csv
+Data Arrival Times for Jobs on Processor 5 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_5.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_5.csv
+Data Arrival Times for Jobs on Processor 6 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_6.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_6.csv
+Data Arrival Times for Jobs on Processor 7 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_7.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_7.csv
+Data Arrival Times for Jobs on Processor 8 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_8.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Data_Arrival_Times_for_Jobs_on_Processor_8.csv
+No data handling times to display.
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/Edge_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/Edge_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/Edge_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/Edge_Average_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/in-site_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/in-site_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/in-site_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/routers/in-site_Average_Load_Over_Time.png
+Histogram_Distribution of Data Arrival Times Across All Processors Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Histogra_Distribution_of_Data_Arrival_Times_Across_All_Processors.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Distribution_of_Data_Arrival_Times_Across_All_Processors.csv
+No data arrival times available for Processor 0.
+No data arrival times available for Processor 1.
+No data arrival times available for Processor 2.
+No data arrival times available for Processor 3.
+No data arrival times available for Processor 4.
+No data arrival times available for Processor 5.
+No data arrival times available for Processor 6.
+No data arrival times available for Processor 7.
+No data arrival times available for Processor 8.
+average_data_arrival_times Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/average_data_arrival_times.png
+Average Processing and Data Arrival Times by Processor plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.csv
+Average DTN Data Handling Time per 1s by DTN plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/dtn/Average_DTN_Data_Handling_Time_per_1s.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_0/dtn
+No wait time data available for plotting.
+No wait time data available for plotting.
+Plotting for HPC site 1 out of 0 to 2
+Site 1 - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_0.csv
+Site 1 - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_1.csv
+Site 1 - Category 2: Total Jobs = 1, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0.0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/Times_for_Category_2.csv
+Summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/ResourcePool/summary_statistics.csv
+Global - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.csv
+Global - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.csv
+Global - Category 2: Total Jobs = 3, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0.0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.csv
+Global summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/global_summary_statistics.csv
+Data Arrival Times for Jobs on Processor 9 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_9.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_9.csv
+Data Arrival Times for Jobs on Processor 10 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_10.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_10.csv
+Data Arrival Times for Jobs on Processor 11 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_11.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_11.csv
+Data Arrival Times for Jobs on Processor 12 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_12.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_12.csv
+Data Arrival Times for Jobs on Processor 13 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_13.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_13.csv
+Data Arrival Times for Jobs on Processor 14 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_14.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_14.csv
+Data Arrival Times for Jobs on Processor 15 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_15.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_15.csv
+Data Arrival Times for Jobs on Processor 16 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_16.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_16.csv
+Data Arrival Times for Jobs on Processor 17 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_17.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Data_Arrival_Times_for_Jobs_on_Processor_17.csv
+No data handling times to display.
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/Edge_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/Edge_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/Edge_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/Edge_Average_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/in-site_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/in-site_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/in-site_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/routers/in-site_Average_Load_Over_Time.png
+Histogram_Distribution of Data Arrival Times Across All Processors Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Histogra_Distribution_of_Data_Arrival_Times_Across_All_Processors.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Distribution_of_Data_Arrival_Times_Across_All_Processors.csv
+No data arrival times available for Processor 9.
+No data arrival times available for Processor 10.
+No data arrival times available for Processor 11.
+No data arrival times available for Processor 12.
+No data arrival times available for Processor 13.
+No data arrival times available for Processor 14.
+No data arrival times available for Processor 15.
+No data arrival times available for Processor 16.
+No data arrival times available for Processor 17.
+average_data_arrival_times Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/average_data_arrival_times.png
+Average Processing and Data Arrival Times by Processor plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.csv
+Average DTN Data Handling Time per 1s by DTN plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/dtn/Average_DTN_Data_Handling_Time_per_1s.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_1/dtn
+No wait time data available for plotting.
+No wait time data available for plotting.
+Plotting for HPC site 2 out of 0 to 2
+Site 2 - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_0.csv
+Site 2 - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_1.csv
+Site 2 - Category 2: Total Jobs = 1, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/Times_for_Category_2.csv
+Summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/ResourcePool/summary_statistics.csv
+Global - Category 0: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 0 to process.
+Times for Category 0 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_0.csv
+Global - Category 1: Total Jobs = 0, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0
+No time series data available for category 1 to process.
+Times for Category 1 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_1.csv
+Global - Category 2: Total Jobs = 3, Completed Jobs = 0
+Average Completion Time = 0
+Average Waiting Time = 0.0
+No time series data available for category 2 to process.
+Times for Category 2 saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/Times_for_Category_2.csv
+Global summary statistics saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Global_ResourcePool/global_summary_statistics.csv
+Data Arrival Times for Jobs on Processor 18 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_18.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_18.csv
+Data Arrival Times for Jobs on Processor 19 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_19.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_19.csv
+Data Arrival Times for Jobs on Processor 20 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_20.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_20.csv
+Data Arrival Times for Jobs on Processor 21 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_21.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_21.csv
+Data Arrival Times for Jobs on Processor 22 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_22.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_22.csv
+Data Arrival Times for Jobs on Processor 23 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_23.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_23.csv
+Data Arrival Times for Jobs on Processor 24 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_24.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_24.csv
+Data Arrival Times for Jobs on Processor 25 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_25.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_25.csv
+Data Arrival Times for Jobs on Processor 26 Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_26.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Data_Arrival_Times_for_Jobs_on_Processor_26.csv
+No data handling times to display.
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/Edge_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/Edge_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/Edge_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/Edge_Average_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/in-site_Total_Queue_Load_Over_Time.csv
+Queue Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/in-site_Total_Queue_Load_Over_Time.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/in-site_Average_Load_Over_Time.csv
+Average Load Over Time plot saved at /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/routers/in-site_Average_Load_Over_Time.png
+Histogram_Distribution of Data Arrival Times Across All Processors Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Histogra_Distribution_of_Data_Arrival_Times_Across_All_Processors.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Distribution_of_Data_Arrival_Times_Across_All_Processors.csv
+No data arrival times available for Processor 18.
+No data arrival times available for Processor 19.
+No data arrival times available for Processor 20.
+No data arrival times available for Processor 21.
+No data arrival times available for Processor 22.
+No data arrival times available for Processor 23.
+No data arrival times available for Processor 24.
+No data arrival times available for Processor 25.
+No data arrival times available for Processor 26.
+average_data_arrival_times Plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/average_data_arrival_times.png
+Average Processing and Data Arrival Times by Processor plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/processors/Average_Processing_and_Data_Arrival_Times_by_Processor.csv
+Average DTN Data Handling Time per 1s by DTN plot saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/dtn/Average_DTN_Data_Handling_Time_per_1s.png
+CSV saved to /Users/imtiaztee/GitHub/DISTRI-master/runs/42/Site_2/dtn
+No wait time data available for plotting.
+No wait time data available for plotting.
