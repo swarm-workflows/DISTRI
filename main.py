@@ -584,10 +584,45 @@ def main():
         dtn_plot_data_handling_time_series(dtn, directory, args.simulation_time, args.average_interval, site_id)
         router_calculate_and_plot_average_wait_times(routers, args.aqm, directory, args.simulation_time, args.average_interval, site_id, args.add_edge_router)
 
-    # Generate combined CWND plot for dumbell topology
+    # Generate combined plots for dumbell topology
     if args.topology == 'dumbell':
-        from visualization.plotting import plot_combined_cwnd_dumbell
-        plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, args.simulation_time)
+        from visualization.plotting import plot_combined_cwnd_dumbell, plot_combined_throughput_dumbell, plot_combined_retransmissions_dumbell, plot_combined_rtt_dumbell
+        
+        # Calculate maximum completion time across all connections for consistent x-axis
+        max_completion_time = 0
+        for site_id, connections in tcp_connections_per_site.items():
+            for conn in connections:
+                # Check if this is an inter-site DTN-to-DTN connection with throughput data
+                if (isinstance(conn.src, DTN) and isinstance(conn.dst, DTN) and 
+                    hasattr(conn, 'throughput_log') and not conn.throughput_log.empty):
+                    
+                    times = conn.throughput_log['time'].tolist()
+                    if times:
+                        max_completion_time = max(max_completion_time, max(times))
+        
+        # If no completion time found, use simulation time
+        if max_completion_time == 0:
+            max_completion_time = args.simulation_time
+        
+        # Add 3 seconds buffer for better visualization
+        max_completion_time += 0.5
+        
+        print(f"\n=== MAXIMUM TRANSMISSION COMPLETION TIME: {max_completion_time:.1f} seconds ===")
+        
+        # Generate full range plots (using max completion time)
+        print("\n=== GENERATING FULL RANGE PLOTS (0 to max completion time) ===")
+        plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, max_completion_time)
+        plot_combined_throughput_dumbell(tcp_connections_per_site, directory, max_completion_time)
+        plot_combined_rtt_dumbell(tcp_connections_per_site, directory, max_completion_time)
+        plot_combined_retransmissions_dumbell(tcp_connections_per_site, directory, max_completion_time)
+        
+        # Generate detailed plots for 0-10 seconds range
+        print("\n=== GENERATING DETAILED PLOTS (0 to 10 seconds) ===")
+        detailed_time_range = (0, 10)
+        plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, max_completion_time, time_range=detailed_time_range)
+        plot_combined_throughput_dumbell(tcp_connections_per_site, directory, max_completion_time, time_range=detailed_time_range)
+        plot_combined_rtt_dumbell(tcp_connections_per_site, directory, max_completion_time, time_range=detailed_time_range)
+        plot_combined_retransmissions_dumbell(tcp_connections_per_site, directory, max_completion_time, time_range=detailed_time_range)
 
 if __name__ == "__main__":
     main()

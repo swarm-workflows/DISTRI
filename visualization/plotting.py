@@ -1272,7 +1272,7 @@ def plot_connections(connections, connection_type, simulation_time, interval, su
             print(f"Avg. {metric.capitalize()} Over Time Across All {connection_type} Connections plot saved to {plot_path}")
 
 
-def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_time):
+def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_time, time_range=None):
     """
     Plot combined CWND behavior for both inter-site connections in dumbell topology.
     Shows both TCP connections competing through the bottleneck on the same chart.
@@ -1280,6 +1280,7 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
     :param tcp_connections_per_site: Dictionary of TCP connections per site
     :param directory: Base directory to save plots and CSVs
     :param simulation_time: Total simulation time
+    :param time_range: Optional tuple (start_time, end_time) for custom time range
     """
     import shutil
     
@@ -1288,12 +1289,12 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
     if not os.path.exists(combined_dir):
         os.makedirs(combined_dir)
     
-    # Collect all inter-site DTN-to-DTN connections
+    # Collect all inter-site DTN-to-DTN connections with CWND data
     all_inter_site_connections = []
     
     for site_id, connections in tcp_connections_per_site.items():
         for conn in connections:
-            # Check if this is an inter-site DTN-to-DTN connection
+            # Check if this is an inter-site DTN-to-DTN connection with CWND data
             if (isinstance(conn.src, DTN) and isinstance(conn.dst, DTN) and 
                 hasattr(conn, 'cwnd_log') and not conn.cwnd_log.empty):
                 
@@ -1308,7 +1309,7 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
                 all_inter_site_connections.append(connection_data)
     
     if len(all_inter_site_connections) < 2:
-        print("Warning: Less than 2 inter-site connections found for combined plotting")
+        print("Warning: Less than 2 inter-site connections found for combined CWND plotting")
         return
     
     # Create combined CSV
@@ -1320,10 +1321,26 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
     colors = ['blue', 'red', 'green', 'orange', 'purple']
     markers = ['o', 's', '^', 'D', 'v']
     
+    # Track completion times to determine x-axis limit
+    completion_times = []
+    
     for idx, conn_data in enumerate(all_inter_site_connections[:5]):  # Limit to 5 connections
         cwnd_df = conn_data['cwnd_data']
         times = cwnd_df['time'].tolist()
         cwnd_values = cwnd_df['cwnd'].tolist()
+        
+        # Filter by time range if specified
+        if time_range:
+            start_time, end_time = time_range
+            filtered_data = [(t, c) for t, c in zip(times, cwnd_values) if start_time <= t <= end_time]
+            if filtered_data:
+                times, cwnd_values = zip(*filtered_data)
+            else:
+                continue
+        
+        # Track completion time (last data point)
+        if times:
+            completion_times.append(max(times))
         
         # Plot the connection
         color = colors[idx % len(colors)]
@@ -1345,6 +1362,12 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
                 f"Job{idx}", f"Site{conn_data['src_site']}", f"Site{conn_data['dst_site']}"
             ])
     
+    # Determine x-axis limit
+    if time_range:
+        x_lim_right = time_range[1]  # Use specified end time
+    else:
+        x_lim_right = simulation_time  # Use passed simulation_time (which is max completion time)
+    
     # Customize the plot
     plt.xlabel('Time (seconds)', fontsize=12)
     plt.ylabel('CWND (Congestion Window)', fontsize=12)
@@ -1352,17 +1375,22 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
               fontsize=14, pad=20)
     plt.legend(fontsize=10)
     plt.grid(True, alpha=0.3)
-    plt.xlim(left=0)
+    plt.xlim(left=0, right=x_lim_right)  # Use consistent x-axis limit
     plt.ylim(bottom=0)
     
     # Save the plot
-    plot_path = os.path.join(combined_dir, 'combined_cwnd_dumbell_topology.png')
+    if time_range:
+        plot_path = os.path.join(combined_dir, f'combined_cwnd_dumbell_topology_{time_range[0]}_to_{time_range[1]}s.png')
+        csv_path = os.path.join(combined_dir, f'combined_cwnd_dumbell_data_{time_range[0]}_to_{time_range[1]}s.csv')
+    else:
+        plot_path = os.path.join(combined_dir, 'combined_cwnd_dumbell_topology.png')
+        csv_path = os.path.join(combined_dir, 'combined_cwnd_dumbell_data.csv')
+    
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     plt.close()
     print(f"Combined CWND plot saved to: {plot_path}")
     
     # Save the CSV
-    csv_path = os.path.join(combined_dir, 'combined_cwnd_dumbell_data.csv')
     df = pd.DataFrame(csv_data, columns=csv_headers)
     df.to_csv(csv_path, index=False)
     print(f"Combined CWND CSV saved to: {csv_path}")
@@ -1373,10 +1401,534 @@ def plot_combined_cwnd_dumbell(tcp_connections_per_site, directory, simulation_t
         cwnd_df = conn_data['cwnd_data']
         if not cwnd_df.empty:
             cwnd_values = cwnd_df['cwnd'].tolist()
+            times = cwnd_df['time'].tolist()
             print(f"Job {idx} (Connection {conn_data['connection_id']}):")
             print(f"  Start CWND: {cwnd_values[0]:.1f}")
             print(f"  Max CWND: {max(cwnd_values):.1f}")
             print(f"  Final CWND: {cwnd_values[-1]:.1f}")
+            print(f"  Completion Time: {times[-1]:.1f}s")
             print(f"  Data points: {len(cwnd_values)}")
+    
+    return plot_path, csv_path
+
+
+def plot_combined_throughput_dumbell(tcp_connections_per_site, directory, simulation_time, time_range=None):
+    """
+    Plot combined throughput behavior for both inter-site connections in dumbell topology.
+    Shows both TCP connections competing through the bottleneck on the same chart.
+    
+    :param tcp_connections_per_site: Dictionary of TCP connections per site
+    :param directory: Base directory to save plots and CSVs
+    :param simulation_time: Total simulation time
+    :param time_range: Optional tuple (start_time, end_time) for custom time range
+    """
+    import shutil
+    
+    # Create combined analysis directory
+    combined_dir = os.path.join(directory, 'Combined_Analysis')
+    if not os.path.exists(combined_dir):
+        os.makedirs(combined_dir)
+    
+    # Collect all inter-site DTN-to-DTN connections with meaningful throughput data
+    all_inter_site_connections = []
+    from entities.dtn import DTN # Import DTN here to avoid circular dependency
+    
+    for site_id, connections in tcp_connections_per_site.items():
+        for conn in connections:
+            # Check if this is an inter-site DTN-to-DTN connection and has meaningful throughput data
+            if (isinstance(conn.src, DTN) and isinstance(conn.dst, DTN) and 
+                hasattr(conn, 'throughput_log') and not conn.throughput_log.empty and 
+                conn.throughput_log['throughput'].max() > 0):
+                
+                connection_data = {
+                    'site_id': site_id,
+                    'connection_id': conn.connection_id,
+                    'src_site': getattr(conn.src, 'dtn_id', 'unknown'),
+                    'dst_site': getattr(conn.dst, 'dtn_id', 'unknown'),
+                    'throughput_data': conn.throughput_log,
+                    'connection': conn
+                }
+                all_inter_site_connections.append(connection_data)
+    
+    if len(all_inter_site_connections) < 2:
+        print("Warning: Less than 2 inter-site connections found for combined throughput plotting")
+        return
+    
+    # Create combined CSV
+    csv_data = []
+    csv_headers = ['time', 'throughput', 'connection_id', 'job', 'src_site', 'dst_site']
+    
+    # Create the plot
+    plt.figure(figsize=(12, 8))
+    colors = ['blue', 'red', 'green', 'orange', 'purple']
+    markers = ['o', 's', '^', 'D', 'v']
+    
+    # Track completion times to determine x-axis limit
+    completion_times = []
+    
+    for idx, conn_data in enumerate(all_inter_site_connections[:5]):  # Limit to 5 connections
+        throughput_df = conn_data['throughput_data']
+        times = throughput_df['time'].tolist()
+        throughput_values = throughput_df['throughput'].tolist()
+        
+        # Filter by time range if specified
+        if time_range:
+            start_time, end_time = time_range
+            filtered_data = [(t, th) for t, th in zip(times, throughput_values) if start_time <= t <= end_time]
+            if filtered_data:
+                times, throughput_values = zip(*filtered_data)
+            else:
+                continue
+        
+        # Track completion time (last data point)
+        if times:
+            completion_times.append(max(times))
+        
+        # Plot the connection
+        color = colors[idx % len(colors)]
+        marker = markers[idx % len(markers)]
+        label = f"Job {idx} (Site {conn_data['src_site']}→Site {conn_data['dst_site']}, Conn {conn_data['connection_id']})"
+        
+        plt.plot(times, throughput_values, 
+                label=label,
+                linewidth=2, 
+                color=color, 
+                marker=marker, 
+                markersize=2,
+                alpha=0.8)
+        
+        # Add to CSV data
+        for time, throughput in zip(times, throughput_values):
+            csv_data.append([
+                time, throughput, conn_data['connection_id'], 
+                f"Job{idx}", f"Site{conn_data['src_site']}", f"Site{conn_data['dst_site']}"
+            ])
+    
+    # Determine x-axis limit
+    if time_range:
+        x_lim_right = time_range[1]  # Use specified end time
+    else:
+        x_lim_right = simulation_time  # Use passed simulation_time (which is max completion time)
+    
+    # Customize the plot
+    plt.xlabel('Time (seconds)', fontsize=12)
+    plt.ylabel('Throughput (bytes/second)', fontsize=12)
+    plt.title('TCP Throughput Comparison: Simultaneous Jobs in Dumbell Topology\n(Competing connections through bottleneck)', 
+              fontsize=14, pad=20)
+    plt.legend(fontsize=10)
+    plt.grid(True, alpha=0.3)
+    plt.xlim(left=0, right=x_lim_right)  # Use consistent x-axis limit
+    plt.ylim(bottom=0)
+    
+    # Save the plot
+    if time_range:
+        plot_path = os.path.join(combined_dir, f'combined_throughput_dumbell_topology_{time_range[0]}_to_{time_range[1]}s.png')
+        csv_path = os.path.join(combined_dir, f'combined_throughput_dumbell_data_{time_range[0]}_to_{time_range[1]}s.csv')
+    else:
+        plot_path = os.path.join(combined_dir, 'combined_throughput_dumbell_topology.png')
+        csv_path = os.path.join(combined_dir, 'combined_throughput_dumbell_data.csv')
+    
+    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"Combined throughput plot saved to: {plot_path}")
+    
+    # Save the CSV
+    df = pd.DataFrame(csv_data, columns=csv_headers)
+    df.to_csv(csv_path, index=False)
+    print(f"Combined throughput CSV saved to: {csv_path}")
+    
+    # Print summary statistics
+    print("\n=== COMBINED THROUGHPUT ANALYSIS ===")
+    for idx, conn_data in enumerate(all_inter_site_connections):
+        throughput_df = conn_data['throughput_data']
+        if not throughput_df.empty:
+            throughput_values = throughput_df['throughput'].tolist()
+            times = throughput_df['time'].tolist()
+            print(f"Job {idx} (Connection {conn_data['connection_id']}):")
+            print(f"  Start Throughput: {throughput_values[0]:.1f} bytes/s")
+            print(f"  Max Throughput: {max(throughput_values):.1f} bytes/s")
+            print(f"  Final Throughput: {throughput_values[-1]:.1f} bytes/s")
+            print(f"  Average Throughput: {sum(throughput_values)/len(throughput_values):.1f} bytes/s")
+            print(f"  Completion Time: {times[-1]:.1f}s")
+            print(f"  Data points: {len(throughput_values)}")
+    
+    return plot_path, csv_path
+
+
+def plot_combined_retransmissions_dumbell(tcp_connections_per_site, directory, simulation_time, time_range=None):
+    """
+    Plot combined retransmission behavior for both inter-site connections in dumbell topology.
+    Creates both a summary bar chart and a time-based stacked bar chart showing retransmission events.
+    
+    :param tcp_connections_per_site: Dictionary of TCP connections per site
+    :param directory: Base directory to save plots and CSVs
+    :param simulation_time: Total simulation time
+    :param time_range: Optional tuple (start_time, end_time) for custom time range
+    """
+    import shutil
+    
+    # Create combined analysis directory
+    combined_dir = os.path.join(directory, 'Combined_Analysis')
+    if not os.path.exists(combined_dir):
+        os.makedirs(combined_dir)
+    
+    # Collect all inter-site DTN-to-DTN connections (same filtering as CWND plot)
+    all_inter_site_connections = []
+    
+    for site_id, connections in tcp_connections_per_site.items():
+        for conn in connections:
+            # Check if this is an inter-site DTN-to-DTN connection with CWND data (same as CWND plot)
+            if (isinstance(conn.src, DTN) and isinstance(conn.dst, DTN) and 
+                hasattr(conn, 'cwnd_log') and not conn.cwnd_log.empty):
+                
+                # Include all connections that have CWND data, even if they have no retransmission data
+                if hasattr(conn, 'retransmission_log') and not conn.retransmission_log.empty:
+                    retransmission_values = conn.retransmission_log['retransmissions'].tolist()
+                    total_retransmissions = sum(1 for x in retransmission_values if x == -1)  # Count retransmission events
+                    retransmission_data = conn.retransmission_log
+                else:
+                    total_retransmissions = 0
+                    retransmission_data = pd.DataFrame(columns=['time', 'retransmissions']) # Empty DataFrame
+                
+                connection_data = {
+                    'site_id': site_id,
+                    'connection_id': conn.connection_id,
+                    'src_site': getattr(conn.src, 'dtn_id', 'unknown'),
+                    'dst_site': getattr(conn.dst, 'dtn_id', 'unknown'),
+                    'total_retransmissions': total_retransmissions,
+                    'retransmission_data': retransmission_data, # Store the DataFrame
+                    'connection': conn
+                }
+                all_inter_site_connections.append(connection_data)
+    
+    if len(all_inter_site_connections) < 1:
+        print("Warning: Less than 1 inter-site connections found for combined retransmission plotting")
+        return
+    
+    # Create combined CSV
+    csv_data = []
+    csv_headers = ['connection_id', 'job', 'src_site', 'dst_site', 'total_retransmissions']
+    
+    # Define colors for plotting
+    colors = ['blue', 'red', 'green', 'orange', 'purple']
+    
+    # Prepare data for bar chart
+    connection_labels = []
+    retransmission_counts = []
+    bar_colors = []
+    
+    for idx, conn_data in enumerate(all_inter_site_connections[:5]):  # Limit to 5 connections
+        # Create labels with proper line breaks (not escaped \n)
+        connection_labels.append(f"Job {idx}\n(Site {conn_data['src_site']}→Site {conn_data['dst_site']}\nConn {conn_data['connection_id']})")
+        retransmission_counts.append(conn_data['total_retransmissions'])
+        bar_colors.append(colors[idx % len(colors)])
+        
+        # Add to CSV data
+        csv_data.append([
+            conn_data['connection_id'], 
+            f"Job{idx}", 
+            f"Site{conn_data['src_site']}", 
+            f"Site{conn_data['dst_site']}", 
+            conn_data['total_retransmissions']
+        ])
+    
+    # Create bar chart
+    plt.figure(figsize=(10, 6))
+    bars = plt.bar(connection_labels, retransmission_counts, color=bar_colors, alpha=0.8)
+    
+    # Add value labels on top of bars
+    for bar, count in zip(bars, retransmission_counts):
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height + max(1, height * 0.05),
+                f'{count}', ha='center', va='bottom', fontsize=11, fontweight='bold')
+    
+    # Customize the plot
+    plt.xlabel('Connection', fontsize=12)
+    plt.ylabel('Total Retransmissions', fontsize=12)
+    plt.title('TCP Retransmission Comparison: Simultaneous Jobs in Dumbell Topology\n(Competing connections through bottleneck)', 
+              fontsize=14, pad=20)
+    plt.xticks(rotation=0, ha='center')
+    plt.grid(True, alpha=0.3, axis='y')
+    plt.ylim(bottom=0, top=max(retransmission_counts) * 1.2 if retransmission_counts else 10)
+    
+    # Save the plot
+    if time_range:
+        plot_path = os.path.join(combined_dir, f'combined_retransmissions_dumbell_topology_{time_range[0]}_to_{time_range[1]}s.png')
+        csv_path = os.path.join(combined_dir, f'combined_retransmissions_dumbell_data_{time_range[0]}_to_{time_range[1]}s.csv')
+    else:
+        plot_path = os.path.join(combined_dir, 'combined_retransmissions_dumbell_topology.png')
+        csv_path = os.path.join(combined_dir, 'combined_retransmissions_dumbell_data.csv')
+    
+    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"Combined retransmissions bar chart saved to: {plot_path}")
+    
+    # Save the CSV
+    df = pd.DataFrame(csv_data, columns=csv_headers)
+    df.to_csv(csv_path, index=False)
+    print(f"Combined retransmissions CSV saved to: {csv_path}")
+    
+    # Now create the time-based stacked plot
+    plt.figure(figsize=(12, 8))
+    
+    # Collect retransmission events by time
+    time_data = {}
+    job_names = [f"Job {idx}" for idx in range(len(all_inter_site_connections[:5]))]
+    
+    for idx, conn_data in enumerate(all_inter_site_connections[:5]):
+        job_name = f"Job {idx}"
+        if hasattr(conn_data['connection'], 'retransmission_log') and not conn_data['connection'].retransmission_log.empty:
+            retransmission_df = conn_data['connection'].retransmission_log
+            times = retransmission_df['time'].tolist()
+            retransmission_values = retransmission_df['retransmissions'].tolist()
+            
+            # Find retransmission events (value == -1)
+            for time, value in zip(times, retransmission_values):
+                if value == -1:  # Retransmission event
+                    if time not in time_data:
+                        time_data[time] = {}
+                    time_data[time][job_name] = time_data[time].get(job_name, 0) + 1
+    
+    # Aggregate by second (round timestamps to nearest second)
+    aggregated_time_data = {}
+    for time, jobs in time_data.items():
+        second = round(time)  # Round to nearest second
+        if second not in aggregated_time_data:
+            aggregated_time_data[second] = {}
+        for job, count in jobs.items():
+            aggregated_time_data[second][job] = aggregated_time_data[second].get(job, 0) + count
+    
+    # Get all unique seconds and sort them
+    all_seconds = sorted(aggregated_time_data.keys()) if aggregated_time_data else []
+    
+    # Filter by time range if specified
+    if time_range:
+        start_time, end_time = time_range
+        all_seconds = [s for s in all_seconds if start_time <= s <= end_time]
+    
+    if not all_seconds:
+        print("Warning: No retransmission events found in the specified time range")
+        return
+    
+    # Prepare data for stacked bar chart
+    bar_data = {job: [] for job in job_names}
+    
+    for second in all_seconds:
+        for job in job_names:
+            bar_data[job].append(aggregated_time_data[second].get(job, 0))
+    
+    # Plot stacked bars - show all jobs even if they have 0 retransmissions
+    bottom_values = [0] * len(all_seconds)  # Track the bottom for stacking
+    
+    for idx, job in enumerate(job_names):
+        conn_data = all_inter_site_connections[idx]
+        label = f"Job {idx} (Site {conn_data['src_site']}→Site {conn_data['dst_site']}, Conn {conn_data['connection_id']})"
+        
+        # Get the data for this job
+        job_data = bar_data[job]
+        
+        # Plot this job's bars on top of the previous ones
+        plt.bar(all_seconds, job_data, bottom=bottom_values, 
+               label=label, color=colors[idx % len(colors)], alpha=0.8, width=0.8)
+        
+        # Update bottom values for the next job
+        for i in range(len(all_seconds)):
+            bottom_values[i] += job_data[i]
+    
+    # Add individual job numbers on their respective stacked bars
+    for second_idx, second in enumerate(all_seconds):
+        bottom = 0
+        for job in job_names:
+            job_count = aggregated_time_data[second].get(job, 0)
+            if job_count > 0:  # Only add text if this job has retransmissions
+                # Position text in the middle of this job's stacked bar segment
+                text_position = bottom + (job_count / 2)
+                plt.text(second, text_position, str(job_count), 
+                        ha='center', va='center', fontsize=9, fontweight='bold',
+                        color='white')  # White text for better visibility
+            bottom += job_count
+    
+    # Determine x-axis limit
+    if time_range:
+        x_lim_right = time_range[1]  # Use specified end time
+    else:
+        x_lim_right = simulation_time  # Use passed simulation_time (which is max completion time)
+    
+    # Customize the plot
+    plt.xlabel('Time (seconds)', fontsize=12)
+    plt.ylabel('Retransmission Events (count)', fontsize=12)
+    plt.title('TCP Retransmission Events Over Time: Simultaneous Jobs in Dumbell Topology\n(Competing connections through bottleneck)', 
+              fontsize=14, pad=20)
+    plt.legend(fontsize=10)
+    plt.grid(True, alpha=0.3, axis='y')
+    plt.xlim(left=0, right=x_lim_right)  # Use consistent x-axis limit
+    plt.ylim(bottom=0)
+    
+    # Save the time-based plot
+    if time_range:
+        time_plot_path = os.path.join(combined_dir, f'combined_retransmissions_time_dumbell_topology_{time_range[0]}_to_{time_range[1]}s.png')
+        time_csv_path = os.path.join(combined_dir, f'combined_retransmissions_time_dumbell_data_{time_range[0]}_to_{time_range[1]}s.csv')
+    else:
+        time_plot_path = os.path.join(combined_dir, 'combined_retransmissions_time_dumbell_topology.png')
+        time_csv_path = os.path.join(combined_dir, 'combined_retransmissions_time_dumbell_data.csv')
+    
+    plt.savefig(time_plot_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"Combined retransmissions time-based plot saved to: {time_plot_path}")
+    
+    # Save the time-based CSV
+    time_csv_data = []
+    time_csv_headers = ['time', 'job', 'retransmission_count']
+    
+    for second in all_seconds:
+        for job in job_names:
+            count = aggregated_time_data[second].get(job, 0)
+            if count > 0:  # Only include actual retransmission events
+                time_csv_data.append([second, job, count])
+    
+    time_df = pd.DataFrame(time_csv_data, columns=time_csv_headers)
+    time_df.to_csv(time_csv_path, index=False)
+    print(f"Combined retransmissions time-based CSV saved to: {time_csv_path}")
+
+def plot_combined_rtt_dumbell(tcp_connections_per_site, directory, simulation_time, time_range=None):
+    """
+    Plot combined RTT behavior for both inter-site connections in dumbell topology.
+    Shows both TCP connections competing through the bottleneck on the same chart.
+    
+    :param tcp_connections_per_site: Dictionary of TCP connections per site
+    :param directory: Base directory to save plots and CSVs
+    :param simulation_time: Total simulation time
+    :param time_range: Optional tuple (start_time, end_time) for custom time range
+    """
+    import shutil
+    
+    # Create combined analysis directory
+    combined_dir = os.path.join(directory, 'Combined_Analysis')
+    if not os.path.exists(combined_dir):
+        os.makedirs(combined_dir)
+    
+    # Collect all inter-site DTN-to-DTN connections
+    all_inter_site_connections = []
+    
+    for site_id, connections in tcp_connections_per_site.items():
+        for conn in connections:
+            # Check if this is an inter-site DTN-to-DTN connection
+            if (isinstance(conn.src, DTN) and isinstance(conn.dst, DTN) and 
+                hasattr(conn, 'rtt_log') and not conn.rtt_log.empty):
+                
+                # Include all connections with RTT data, even if they have no RTT events
+                rtt_values = conn.rtt_log['rtt'].tolist()
+                # Include all connections that have RTT logs, regardless of RTT count
+                connection_data = {
+                    'site_id': site_id,
+                    'connection_id': conn.connection_id,
+                    'src_site': getattr(conn.src, 'dtn_id', 'unknown'),
+                    'dst_site': getattr(conn.dst, 'dtn_id', 'unknown'),
+                    'rtt_data': conn.rtt_log,
+                    'connection': conn
+                }
+                all_inter_site_connections.append(connection_data)
+    
+    if len(all_inter_site_connections) < 2:
+        print("Warning: Less than 2 inter-site connections found for combined RTT plotting")
+        return
+    
+    # Create combined CSV
+    csv_data = []
+    csv_headers = ['time', 'rtt', 'connection_id', 'job', 'src_site', 'dst_site']
+    
+    # Create the plot
+    plt.figure(figsize=(12, 8))
+    colors = ['blue', 'red', 'green', 'orange', 'purple']
+    markers = ['o', 's', '^', 'D', 'v']
+    
+    # Track completion times to determine x-axis limit
+    completion_times = []
+    
+    for idx, conn_data in enumerate(all_inter_site_connections[:5]):  # Limit to 5 connections
+        rtt_df = conn_data['rtt_data']
+        times = rtt_df['time'].tolist()
+        rtt_values = rtt_df['rtt'].tolist()
+        
+        # Filter by time range if specified
+        if time_range:
+            start_time, end_time = time_range
+            filtered_data = [(t, r) for t, r in zip(times, rtt_values) if start_time <= t <= end_time]
+            if filtered_data:
+                times, rtt_values = zip(*filtered_data)
+            else:
+                continue
+        
+        # Track completion time (last data point)
+        if times:
+            completion_times.append(max(times))
+        
+        # Plot the connection
+        color = colors[idx % len(colors)]
+        marker = markers[idx % len(markers)]
+        label = f"Job {idx} (Site {conn_data['src_site']}→Site {conn_data['dst_site']}, Conn {conn_data['connection_id']})"
+        
+        plt.plot(times, rtt_values, 
+                label=label,
+                linewidth=2, 
+                color=color, 
+                marker=marker, 
+                markersize=2,
+                alpha=0.8)
+        
+        # Add to CSV data
+        for time, rtt in zip(times, rtt_values):
+            csv_data.append([
+                time, rtt, conn_data['connection_id'], 
+                f"Job{idx}", f"Site{conn_data['src_site']}", f"Site{conn_data['dst_site']}"
+            ])
+    
+    # Determine x-axis limit
+    if time_range:
+        x_lim_right = time_range[1]  # Use specified end time
+    else:
+        x_lim_right = simulation_time  # Use passed simulation_time (which is max completion time)
+    
+    # Customize the plot
+    plt.xlabel('Time (seconds)', fontsize=12)
+    plt.ylabel('RTT (seconds)', fontsize=12)
+    plt.title('TCP RTT Comparison: Simultaneous Jobs in Dumbell Topology\n(Competing connections through bottleneck)', 
+              fontsize=14, pad=20)
+    plt.legend(fontsize=10)
+    plt.grid(True, alpha=0.3)
+    plt.xlim(left=0, right=x_lim_right)  # Use consistent x-axis limit
+    plt.ylim(bottom=0)
+    
+    # Save the plot
+    if time_range:
+        plot_path = os.path.join(combined_dir, f'combined_rtt_dumbell_topology_{time_range[0]}_to_{time_range[1]}s.png')
+        csv_path = os.path.join(combined_dir, f'combined_rtt_dumbell_data_{time_range[0]}_to_{time_range[1]}s.csv')
+    else:
+        plot_path = os.path.join(combined_dir, 'combined_rtt_dumbell_topology.png')
+        csv_path = os.path.join(combined_dir, 'combined_rtt_dumbell_data.csv')
+    
+    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"Combined RTT plot saved to: {plot_path}")
+    
+    # Save the CSV
+    df = pd.DataFrame(csv_data, columns=csv_headers)
+    df.to_csv(csv_path, index=False)
+    print(f"Combined RTT CSV saved to: {csv_path}")
+    
+    # Print summary statistics
+    print("\n=== COMBINED RTT ANALYSIS ===")
+    for idx, conn_data in enumerate(all_inter_site_connections):
+        rtt_df = conn_data['rtt_data']
+        if not rtt_df.empty:
+            rtt_values = rtt_df['rtt'].tolist()
+            times = rtt_df['time'].tolist()
+            print(f"Job {idx} (Connection {conn_data['connection_id']}):")
+            print(f"  Start RTT: {rtt_values[0]:.3f}s")
+            print(f"  Max RTT: {max(rtt_values):.3f}s")
+            print(f"  Final RTT: {rtt_values[-1]:.3f}s")
+            print(f"  Average RTT: {sum(rtt_values)/len(rtt_values):.3f}s")
+            print(f"  Completion Time: {times[-1]:.1f}s")
+            print(f"  Data points: {len(rtt_values)}")
     
     return plot_path, csv_path
