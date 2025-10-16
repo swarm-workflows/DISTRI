@@ -342,7 +342,11 @@ We welcome contributions to DISTRI! Please see our contributing guidelines for:
 
 ## 📄 **License**
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+DISTRI: Distributed Multi-Facility HPC Simulator (DISTRI) Copyright (c) 2025, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Dept. of Energy). All rights reserved.
+
+If you have questions about your rights to use or distribute this software,
+please contact Berkeley Lab's Intellectual Property Office at
+IPO@lbl.gov.
 
 ## 🙏 **Acknowledgments**
 
